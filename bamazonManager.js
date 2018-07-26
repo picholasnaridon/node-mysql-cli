@@ -14,7 +14,7 @@ connection.connect();
 var currentProducts = []
 var currentDepartments = []
 
-connection.query('SELECT DISTINCT department_name FROM products', function (error, results, fields) {
+connection.query('SELECT DISTINCT department_name FROM departments', function (error, results, fields) {
   if (error) throw error;
   results.forEach(element => {
     currentDepartments.push(element.department_name)
